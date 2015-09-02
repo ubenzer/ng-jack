@@ -10,7 +10,7 @@ A basic Blackjack game implementation, based on **Angular.js 1.4.x**
 0. Establish a test infrastructure. (karma + mocha + should.js)
 1. Write tests
 2. Setup travis
-3. Use gulp to automize tasks and enforce eslint etc.
+3. Use gulp to automize tasks, dist mode, minify and concat files, enforce eslint etc.
 4. Add some animations
 5. Add sound effects to cards
 6. Open a real gambling site :P
