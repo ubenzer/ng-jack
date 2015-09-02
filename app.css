@@ -1,0 +1,141 @@
+/* Add this to css, because we include angular.js at the bottom of the html. This'll prevent FOUC */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  pading: 0;
+}
+body {
+  /* gamble table like background */
+  background: #0f943d;
+  background: radial-gradient(ellipse at center, #0f943d 0%,#0f943d 29%,#0f943d 29%,#044119 100%);
+
+  /* a funny font that is only suitable to a game */
+  font-family: 'Luckiest Guy', cursive;
+
+  /* if we want, by prefixing all flex properties, we can also make it work it Safari and IE11 */
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  color: rgba(255, 255, 255, .7);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.60);
+  font-size: 22px;
+}
+
+h1 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 48px;
+  margin: 40px 0;
+}
+
+h2 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+button {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: rgba(238, 238, 238, 0.51);
+  border: 1px solid #157335;
+  border-radius: 3px;
+  color: rgb(11, 68, 30);
+  text-align: center;
+  min-width: 100px;
+  font-weight: 700;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  color: rgba(11, 68, 30, 0.16);
+}
+
+button:hover {
+  border: 1px solid #000C04;
+}
+
+button:active {
+  background-color: rgb(238, 238, 238);
+}
+
+button + button {
+  margin-left: 30px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.actions {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bj-table {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dealer, .player {
+  margin: 0 20px;
+  min-height: 250px;
+  flex-shrink: 0;
+}
+
+.player {
+  min-width: calc(33vw - 90px);
+  flex-grow: 1;
+}
+
+.player + .player {
+  margin-left: 50px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+card {
+  flex-shrink: 0;
+  height: 120px;
+}
+
+card+card {
+  margin-left: 10px;
+}
+
+card img {
+  height: 100%;
+}
+
+.status {
+  margin-top: 10px;
+  text-align: center;
+}
+.status span {
+  margin-right: 10px;
+}
+
+.players {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex-grow: 2;
+}

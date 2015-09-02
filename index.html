@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="ub-app">
+  <head>
+    <meta charset="utf-8">
+    <title>UB Blackjack</title>
+    <link href="app.css" media="all" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-controller="Application as application">
+    <h1>ng-jack</h1>
+    <div class="loading" ng-if="application.loaded !== true">
+      <span>Magic happening...</span>
+    </div>
+    <div ng-cloak ng-controller="Game as game" class="bj-table">
+      <div ng-show="!game.state.inProgress" class="actions">
+        <div ng-show="!game.visual.gameOver" class="new-game-actions">
+          <button ng-disabled="game.state.players.length >= 5"ng-click="game.actions.addPlayer()" class="add-player">Add player</button>
+          <button ng-disabled="game.state.players.length === 1" ng-click="game.actions.removePlayer()" class="remove-playeer">Remove player</button>
+          <button ng-click="game.actions.startGame()" class="start-game">Play!</button>
+        </div>
+        <div ng-show="game.visual.gameOver" class="end-game-actions">
+          <button ng-click="game.actions.endGame()" class="end-game">Start over</button>
+        </div>
+      </div>
+
+      <div class="dealer">
+        <h2>Dealer</h2>
+        <div class="card-container">
+          <card ng-repeat="card in game.state.dealer.cards track by $index" card-closed="$first && !game.state.dealer.firstCardVisible" card-data="card"></card>
+        </div>
+        <div class="status">
+          <span ng-show="game.state.dealer.isBust">Dealer busted!</span>
+          <span ng-show="game.visual.gameOver" class="score">Score: {{ game.state.dealer.score }}</span>
+        </div>
+      </div>
+
+      <div class="players">
+        <div class="player" ng-repeat="player in game.state.players track by $index">
+          <h2>Player {{ $index + 1 }}<span ng-show="player.isCurrent"> * </span></h2>
+          <div class="card-container">
+            <card ng-repeat="card in player.cards" card-data="card"></card>
+          </div>
+          <div class="actions">
+            <button ng-disabled="!game.state.inProgress || !player.isCurrent" ng-click="game.actions.hit()" class="hit">Hit</button>
+            <button ng-disabled="!game.state.inProgress || !player.isCurrent" ng-click="game.actions.stand()" class="stand">Stand</button>
+          </div>
+          <div class="status">
+            <span class="score">Score: {{ player.score }}</span>
+            <span ng-show="player.isLost">You lose!</span>
+            <span ng-show="player.isWin">You win!</span>
+            <span ng-show="player.isBust">You bust!</span>
+            <span ng-show="player.isPush">Push!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/application.js"></script>
+    <script src="controllers/game.js"></script>
+    <script src="directives/card.js"></script>
+    <script src="services/Blackjack.js"></script>
+    <script src="services/CardDeck.js"></script>
+    <script src="services/Player.js"></script>
+  </body>
+</html>
