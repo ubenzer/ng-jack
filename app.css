@@ -106,10 +106,11 @@ button + button {
   margin-left: 50px;
 }
 .player h2 {
-  transition: color .3s ease;
+  transition: all .3s ease;
 }
 .player.active-player h2 {
-  color: white;
+  color: #FFFFFF;
+  text-shadow: 0 0 20px black;
 }
 
 .card-container {
