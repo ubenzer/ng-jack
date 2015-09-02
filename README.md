@@ -2,7 +2,7 @@
 A basic Blackjack game implementation, based on **Angular.js 1.4.x**
 
 ## Demo
-[Click here to play the game!](https://ubenzer.github.io/ng-jack).
+[Click here to play the game!](https://ubenzer.github.io/ng-jack)
 
 ![Preview](preview.png)
 
