@@ -105,6 +105,12 @@ button + button {
 .player + .player {
   margin-left: 50px;
 }
+.player h2 {
+  transition: color .3s ease;
+}
+.player.active-player h2 {
+  color: white;
+}
 
 .card-container {
   display: flex;

@@ -35,8 +35,8 @@
       </div>
 
       <div class="players">
-        <div class="player" ng-repeat="player in game.state.players track by $index">
-          <h2>Player {{ $index + 1 }}<span ng-show="player.isCurrent"> * </span></h2>
+        <div class="player" ng-class="{'active-player': player.isCurrent}" ng-repeat="player in game.state.players track by $index">
+          <h2>Player {{ $index + 1 }}</h2>
           <div class="card-container">
             <card ng-repeat="card in player.cards" card-data="card"></card>
           </div>
