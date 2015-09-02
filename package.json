@@ -1,5 +1,20 @@
 {
   "name": "ub-blackjack",
+  "description": "A Blackjack game implementation in Angular.js",
+  "author": "Umut Benzer <umut@benzer.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ubenzer/ng-jack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ubenzer/ng-jack/issues"
+  },
+  "keywords": [
+    "angularjs",
+    "gambling",
+    "game",
+    "blackjack"
+  ],
   "version": "0.0.1",
   "engines": {
     "node": ">=0.12.0"
