@@ -1,11 +1,12 @@
 # ng-jack
-A basic Blackjack game implementation, completely based on Angular.js 1.4.x
+A basic Blackjack game implementation, based on **Angular.js 1.4.x**
 
-Play the game here.
+## Demo
+[Click here to play the game!](https://ubenzer.github.io/ng-jack).
 
-Put image here
+![Preview](preview.png)
 
-## Awesome things to do
+### To do
 0. Establish a test infrastructure. (karma + mocha + should.js)
 1. Write tests
 2. Setup travis
@@ -14,11 +15,10 @@ Put image here
 5. Add sound effects to cards
 6. Open a real gambling site :P
 
-## Contributing
-Just open an issue or create a pull request.
+### Contributing
+Just open an issue or create a pull request. You can pick one from the Todo list above.
 
-## Credits
-
-Card set: [Byron Knoll](http://www.byronknoll.com/projects.html)
-Card deck back: [https://commons.wikimedia.org/wiki/File:Card_back_05a.svg](https://commons.wikimedia.org/wiki/File:Card_back_05a.svg)
-Font: Luckiest Guy
+### Credits
+1. *Card set:* [Byron Knoll](http://www.byronknoll.com/projects.html)
+2. *Card deck back:* [https://commons.wikimedia.org/wiki/File:Card_back_05a.svg](https://commons.wikimedia.org/wiki/File:Card_back_05a.svg)
+4. *Font:* Luckiest Guy
