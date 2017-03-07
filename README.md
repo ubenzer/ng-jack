@@ -1,4 +1,6 @@
 # ng-jack
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ubenzer/ng-jack.svg)](https://greenkeeper.io/)
 A basic Blackjack game implementation, based on **Angular.js 1.4.x**
 
 ## Demo
